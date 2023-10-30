@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Personal Portfolio</title>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Assets/images/Logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Bootcamp Student</p>
+                <h1>Hi, I am <span>John</span><br>Lott from Orlando, Florida</h1>
+            </div>
+        </div>
+    </div>
+    <!-- This is my about me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Assets/images/Johnpic.png" alt="a man looking confident">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am currently a bootcamp student at the university of central Florida. 
+                    I have dabbled here and there in the world of coding but this has been the 
+                    most fun I have ever had. With each week things become more and more advanced
+                    which has been helping me make more and more complex sites. I truly look forward 
+                    to the coming months to see how far I can truly go.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Bootcamp</span><br>Student</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-2024</span><br>UCF Bootcamp</li>
+                            <li><span>2022-2023</span><br>CodeAcademy</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-2024</span><br>UCF Bootcamp</li>
+                            <li><span>2023-2024</span><br>Google IT Certificate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is for my Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Assets/images/codingpic.jpeg">
+                    <div class="layer">
+                        <h3>Landing Page</h3>
+                        <p>This was the landing page for Horizon.</p>
+                        <a href="https://johnlott1.github.io/new-Module-1/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Assets/images/Laptop.jpeg">
+                    <div class="layer">
+                        <h3>Future Work</h3>
+                            <p>This is a place holder for future work.</p>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Assets/images/meetingpic.jpeg">
+                    <div class="layer">
+                        <h3>Future Work</h3>
+                            <p>This is a place holder for future work.</p>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+<!-- Contact Information -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>lott.john99@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>3212131329</p>
+                
+            </div>
+            <div class="contact-right"></div>
+                <div class="social-links">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/john-lott-456866170/">LinkedIn</a></li>
+                        <li><a href="https://www.github.com/johnlott1/">GitHub</a></li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+        
+</body>
+</html>
